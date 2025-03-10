@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Investimentos em Cripto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+     <form class="caixa">
+          <img class="img" src="../calculadora/img/logo.webp" >
+            
+                <input type="text" id="ativo" value="" placeholder="Nome do Ativo">
+                <input type="number" id="investimento" value="" placeholder="Valor do Investimento (R$)">
+                <span id="valorCripto"></span>
+                <input type="date" id="dataCompra">
+                <input type="number" id="cotacaoCompra"placeholder="selecione data Compra" readonly>
+                <input type="date" id="dataVenda">
+                <input type="number" id="cotacaoVenda"placeholder="selecione data de venda" readonly>
+                <span id="valorVenda"></span>
+                <span id="lucro"></span>
+                <span id="porcentagem"></span>
+                
+                <input type="number" id="cotacaoDolar" placeholder="Cotação $ na data de venda" readonly>
+        
+        <button class="btn" onclick="calcular()">Calcular</button>
+        </form>
+
+    <script src="..../calculadora/js/main.js"></script>
+</body>
+</html>
