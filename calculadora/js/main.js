@@ -1,3 +1,5 @@
+import listatabela from './lista.js';
+
 // Formata a data para o padrão YYYYMMDD (formato aceito pela API)
 function formatarDataParaAPI(data) {
     let dataObj = new Date(data);
@@ -105,22 +107,25 @@ function calcular() {
     let lucro = valorVenda - investimento;
     let porcentagem = (lucro / investimento) * 100;
 
-    // Exibe resultados
-    document.getElementById("historico").insertAdjacentHTML("beforeend", `
-        <tr>
-            <td>${ativo}</td>
-            <td>R$ ${investimento.toFixed(2)}</td>
-            <td>${valorCripto.toFixed(8)}</td>
-            <td>${document.getElementById("dataCompra").value}</td>
-            <td>$${cotacaoCompra.toFixed(2)}</td>
-            <td>${document.getElementById("dataVenda").value}</td>
-            <td>$${cotacaoVenda.toFixed(2)}</td>
-            <td>R$ ${valorVenda.toFixed(2)}</td>
-            <td>R$ ${lucro.toFixed(2)}</td>
-            <td>${porcentagem.toFixed(2)}%</td>
-        </tr>
-    `);
+
 }
+
+function Carteira() {
+this.investimento = investimento;
+this.cotacaoCompra = cotacaoCompra;
+this.cotacaoVenda = cotacaoVenda;
+this.cotacaoDolar = cotacaoDolar;
+this.valorCripto = valorCripto;
+this.valorVenda = valorVenda;
+this.lucro = lucro;
+this.porcentagem = porcentagem;
+}
+
+const carteira = new Carteiras(investimento, cotacaoCompra, cotacaoVenda, cotacaoDolar, valorCripto, valorVenda, lucro, porcentagem);
+
+response.push(carteira);
 
 // Eventos
 document.querySelectorAll("input[type=date]").forEach(input => input.addEventListener("change", atualizarCotacao));
+
+export default calcular;
